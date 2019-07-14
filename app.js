@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
   res.json({ msg: "Success" });
 });
 
+// Define routes
+app.use("/", require("./routes/index"));
+app.use("/url", require("./routes/url"));
+
 const port = process.env.PORT || 3000; // Define a port
 app.listen(port, () => {
   // Start the server on the defined port

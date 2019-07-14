@@ -11,7 +11,7 @@ const connectDB = async () => {
     console.log("[MongoDB] Connected to the database on port 27017");
   } catch (err) {
     // Error Handler
-    console.error(err.message);
+    console.error("[MongoDB Error]" + " " + err.message);
     process.exit(1);
   }
 };
